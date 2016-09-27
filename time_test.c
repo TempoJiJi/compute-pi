@@ -25,6 +25,26 @@ int main(int argc, char const *argv[])
 #if defined(AVXUNROLL)
     pi = compute_pi_avx_unroll(N);
 #endif
+    /* leibniz */
+#if defined(LEIBNIZ)
+    pi = compute_pi_leibniz(N);
+#endif
+
+#if defined(LOPENMP_2)
+    pi = compute_pi_leibniz_openmp(N, 2);
+#endif
+
+#if defined(LOPENMP_4)
+    pi = compute_pi_leibniz_openmp(N, 4);
+#endif
+
+#if defined(LAVX)
+    pi = compute_pi_leibniz_avx(N);
+#endif
+#if defined(LAVXUNROLL)
+    pi = compute_pi_leibniz_avx_unroll(N);
+#endif
+
     printf("N = %d , pi = %lf\n", N, pi);
 
     return 0;
