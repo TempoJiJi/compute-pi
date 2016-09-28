@@ -6,9 +6,9 @@ set key left
 set xlabel 'N'
 set ylabel 'time(sec)'
 set style fill solid
-set title 'Wall-clock time - using clock_gettime()'
+set title 'Wall-clock time - using clock_gettime() - leibniz'
 #set xrange[0:250000]
-#set yrange[0:]
+set yrange[0:]
 set term png enhanced font 'Verdana,10'
 set output 'runtime.png'
 
